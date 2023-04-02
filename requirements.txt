@@ -5,6 +5,7 @@ python-decouple
 django-cors
 pillow
 psycopg2-binary
+gunicorn
 
 # Development
 black

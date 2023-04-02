@@ -5,7 +5,6 @@
 - To access pgadmin4 db manager use `http://localhost:8081` email **admin@admin.home** and password **postgres**
 
 ## Docker compose
-#
 ```sh
 # Usefull commands for docker compose
 docker compose pull
@@ -17,7 +16,6 @@ docker compose restart nginx
 ```
 
 ## Remote Containers
-#
 ```sh
 # Usefull commands for remote container in vscode.
 # Will be like a normal linux machine with bash or sh terminal
@@ -35,7 +33,6 @@ python manage.py createsuperuser --username me --email admin@admin.home
 ```
 
 ## Configurations on settings.py
-#
 ```py
 # changes or add the configurations on settings.py as you needs.
 DATABASES = {
