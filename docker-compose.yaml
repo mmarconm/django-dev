@@ -31,7 +31,7 @@ services:
   django:
     build: .
     # command: python manage.py runserver 0.0.0.0:8000
-    # command: gurnicorn root.wsgi.application --bind 0.0.0.0:8000
+    # command: gunicorn root.wsgi.application --bind 0.0.0.0:8000
     command: sleep infinity
     volumes:
       - ./app:/app
