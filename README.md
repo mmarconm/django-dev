@@ -1,5 +1,7 @@
 # Django Dev Documentation
 
+> Clone this project for your application, if you need to host your own project with yours configuration, either remove the .git folder and initialize a new one or change remote repository origin for your new repository.
+
 - To access django using nginx use `http://localhost:8080`
 - To access django with django wsgi server use `http://localhost:8000`
 - To access pgadmin4 db manager use `http://localhost:8081` email **admin@admin.home** and password **postgres**
