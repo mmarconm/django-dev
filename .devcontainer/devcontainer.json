@@ -1,0 +1,27 @@
+{
+  "name": "Django Dev",
+  "dockerComposeFile": ["../docker-compose.yaml"],
+  "service": "web",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.linting.pylintEnabled": false,
+        "python.linting.flake8Enabled": false,
+        "python.analysis.inlayHints.functionReturnTypes": false,
+        "python.analysis.inlayHints.variableTypes": false,
+        "python.analysis.completeFunctionParens": false
+      },
+      "extensions": [
+		"mgesbert.python-path",
+		"ms-python.python",
+		"esbenp.prettier-vscode",
+		"christian-kohler.path-intellisense",
+		"usernamehw.errorlens",
+		"batisteo.vscode-django"
+	]
+    }
+  },
+
+  "postCreateCommand": ""
+}

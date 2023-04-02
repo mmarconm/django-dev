@@ -1,0 +1,14 @@
+# Production
+django
+djangorestframework
+python-decouple
+django-cors
+
+# Development
+black
+yapf
+ipython
+flake8
+pylint
+isort
+autopep8
