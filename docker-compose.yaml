@@ -34,7 +34,6 @@ services:
     command: sleep infinity
     volumes:
       - ./app:/app
-      - staticfiles:/app/staticfiles
     ports:
       - 8000:8000
     depends_on:
@@ -46,12 +45,14 @@ services:
     image: nginx
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - staticfiles:/app/staticfiles
+      - ./app/staticfiles:/app/staticfiles:cached
+      - ./app/media:/app/media:cached
     ports:
       - 8080:80
     depends_on:
       - web
 
-volumes:
-  # db_data:
-  staticfiles:
+# volumes:
+#   db_data:
+#   staticfiles:
+#   mediafiles:

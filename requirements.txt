@@ -3,6 +3,8 @@ django
 djangorestframework
 python-decouple
 django-cors
+pillow
+psycopg2-binary
 
 # Development
 black

@@ -1,6 +1,8 @@
 # syntax=docker/dockerfile:1
 FROM python:3.10-alpine
 
+RUN pip3 install -U pip
+
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
