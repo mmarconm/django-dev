@@ -28,7 +28,7 @@ services:
     depends_on:
       - db
 
-  web:
+  django:
     build: .
     # command: python manage.py runserver 0.0.0.0:8000
     command: sleep infinity
@@ -50,7 +50,7 @@ services:
     ports:
       - 8080:80
     depends_on:
-      - web
+      - django
 
 # volumes:
 #   db_data:
