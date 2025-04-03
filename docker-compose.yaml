@@ -1,6 +1,19 @@
-version: '3'
-
 services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # command: python manage.py runserver 0.0.0.0:8000
+    # command: gunicorn root.wsgi.application --bind 0.0.0.0:8000
+    command: sleep infinity
+    volumes:
+      - ./app:/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    env_file:
+      - ./.env.dev
 
   db:
     image: postgres:14
@@ -27,20 +40,6 @@ services:
       - 8081:80
     depends_on:
       - db
-
-  django:
-    build: .
-    # command: python manage.py runserver 0.0.0.0:8000
-    # command: gunicorn root.wsgi.application --bind 0.0.0.0:8000
-    command: sleep infinity
-    volumes:
-      - ./app:/app
-    ports:
-      - 8000:8000
-    depends_on:
-      - db
-    env_file:
-      - ./.env.dev
 
   nginx:
     image: nginx
